@@ -31,3 +31,12 @@ Edit `www/index.html`, lalu `npm run sync` dan `npm run apk` lagi.
 - Ini APK debug (untuk pemakaian pribadi). Untuk Play Store perlu build release
   yang ditandatangani (signed).
 - Akurasi baca angka terbaik dengan cahaya cukup dan angka tercetak jelas.
+
+## Build APK otomatis tanpa memasang apa pun (GitHub Actions)
+1. Buat repositori baru di github.com (boleh private).
+2. Unggah SEMUA isi folder ini (termasuk folder tersembunyi `.github`).
+   Cara mudah: di halaman repo pilih "uploading an existing file", seret semua isi folder.
+   Pastikan file `.github/workflows/build-apk.yml` ikut terunggah.
+3. Buka tab **Actions** > **Build APK** > **Run workflow** (atau tunggu otomatis setelah upload).
+4. Setelah selesai (sekitar 5-8 menit), buka run tersebut, bagian **Artifacts**,
+   unduh `kraepelin-scan-apk` (berisi app-debug.apk).
