@@ -1,0 +1,22 @@
+{
+  "name": "kraepelin-scan",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "assets": "node scripts/copy-assets.js",
+    "setup": "npm run assets && npx cap add android && node scripts/patch-android.js && npx cap sync android",
+    "sync": "npm run assets && npx cap sync android",
+    "apk": "cd android && ./gradlew assembleDebug",
+    "open": "npx cap open android"
+  },
+  "dependencies": {
+    "@capacitor/android": "6.1.2",
+    "@capacitor/core": "6.1.2",
+    "@tesseract.js-data/eng": "1.0.0",
+    "tesseract.js": "5.1.1",
+    "tesseract.js-core": "5.1.0"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "6.1.2"
+  }
+}
